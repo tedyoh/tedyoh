@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <form action="process.php " method="get">
+            <p>Temperature : <input type="text" name="temperature"></p>
+            <p>Humidity : <input type="text" name="humidity"></p>
+            <p><input type="submit" /></p>
+        </form>
+    </body>
+</html>
+
+<?php header("Content
+Type: text/ html;charset =UTF 8");
+$host = 'localhost';
+$user = 'root';
+$pw = '
+autoset ';
+$
+dbName = testdb ';
+$
+mysqli = new mysqli ($host, $user, $pw, dbName
+if($
+mysqli
+echo "MySQL successfully connected!<
+br />";
+$temp = $_GET['temp'];
+$
+humi = $_ humi '];
+echo "<
+br />Temperature = $temp";
+echo ", ";
+echo "Humidity = $
+humi br />";
+$query = "INSERT INTO
+tempnhumi (temp, humi ) VALUES ('$ humi ')";
+mysqli_query
+mysqli ,$query);
+echo "</
+br >
+}
+else{
+echo "MySQL could not be connected";
+}
+mysqli_close
