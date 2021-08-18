@@ -21,5 +21,5 @@
 // showMessage('Hi!');
 
 const dog = {type:"shepperd", name:"ordry", owner:{name:"emily"}};
-console.log(dog);
+console.log(dog.name, dog.owner.name);
 
