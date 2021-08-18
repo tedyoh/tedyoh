@@ -15,10 +15,11 @@
 // changeName(ellie);
 // console.log(ellie);
 
-function showMessage(message, from) {
-    if(from === undefined) {
-        from = 'unknown';
-    }
-    console.log('${message} by ${from}');
-}
-showMessage('Hi!');
+// function showMessage(message, from='unknown') {
+//     console.log('${message} by ${from}');
+// }
+// showMessage('Hi!');
+
+const dog = {type:"shepperd", name:"ordry", owner:{name:"emily"}};
+console.log(dog);
+
