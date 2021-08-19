@@ -16,7 +16,7 @@
 // console.log(ellie);
 
 // function showMessage(message, from='unknown') {
-//     console.log('${message} by ${from}');
+//     console.log(`${message} by ${from}`);
 // }
 // showMessage('Hi!');
 
@@ -29,7 +29,7 @@
 //     console.log(name, age);
 // }
 
-// new User('kim', '28');
+// new User('kim', 28);
 
 
 // function Item(title, price) {
@@ -37,8 +37,8 @@
 //     this.price = price;
 
 //     this.showPrice = function() {
-//         console.log('가격은 '+price+'원 입니다.');
-//         // console.log('가격은 ${price}원 입니다.');
+//         // console.log('가격은 '+price+'원 입니다.');
+//         console.log(`가격은 ${price}원 입니다.`);
 //     }
 // }
 
@@ -65,23 +65,24 @@
 // console.log(arr2);
 
 // promise
-// var p = new Promise(function(resolve, reject) {
-//     setTimeout(function() {
-//         var num = Math.round(Math.random()*20);
-//         var isValid = num % 2;
-//         if (isValid) { resolve(num); }
-//         else { reject(num); }
-//     }, 2000);
-// });
+var p = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        var num = Math.round(Math.random()*100);
+        var isValid = num % 2;
+        if (isValid) { resolve(num); }
+        else { reject(num); }
+    }, 2000);
+    
+});
 
-// p.then(function(num) {
-//     console.log('홀수 : ' + num);
-// }).catch(function(num) {
-//     console.log('짝수 : ' + num);
-// });
+p.then(function(num) {
+    console.log('홀수 : ' + num);
+}).catch(function(num) {
+    console.log('짝수 : ' + num);
+});
 
-// console.log('20까지의 난수 중 홀수/짝수>');
-// console.log('결과는 2초 후에 나옵니다!!');
+console.log('100까지의 난수 중 홀수/짝수>');
+console.log('결과는 2초 후에 나옵니다!!');
 
 // class Person {
 //     constructor(name, tel, address) {
@@ -106,9 +107,19 @@
 
 
 
-const user = {
-    [1+4] : 5,
-    ["안녕"+"하세요"] : "Hello"
-}
+// const user = {
+//     [1+4] : 5,
+//     ["안녕"+"하세요"] : "Hello"
+// }
 
-console.log(user);
+// console.log(user);
+
+
+// let a = 'age';
+
+// const user1 = {
+//     name : 'Mike',
+//     [a] : 30
+// }
+
+// console.log(user1);
